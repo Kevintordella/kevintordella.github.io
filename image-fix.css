@@ -1,0 +1,26 @@
+/* Force all images to maintain aspect ratio - NO distortion */
+img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+}
+
+/* Override any existing image sizing */
+.hero-image-size,
+.standard-image-size,
+.case-container img,
+.case-container-narrow img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: unset !important;
+    min-height: unset !important;
+}
+
+/* Persona images should stay circular */
+.persona-image img {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+}
