@@ -402,3 +402,275 @@ img {
         align-items: center;
     }
 }
+
+/* =================================
+   NEW ADDITIONS FOR OPTION 3 STRUCTURE
+   ADD THESE TO YOUR EXISTING styles.css
+   ================================= */
+
+/* Hero CTA Buttons */
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button.primary {
+    background: #356CEE;
+    color: white;
+}
+
+.cta-button.primary:hover {
+    background: #2451cc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(53, 108, 238, 0.3);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #356CEE;
+    border: 2px solid #356CEE;
+}
+
+.cta-button.secondary:hover {
+    background: #356CEE;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Page Header (for Case Studies & Creative Work pages) */
+.page-header {
+    padding: 6rem 2rem 3rem;
+    background: #f8f9fa;
+}
+
+.page-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 1rem;
+}
+
+.page-description {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Creative Work Grid */
+.creative-grid-section {
+    padding: 4rem 2rem;
+}
+
+.creative-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.creative-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creative-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.creative-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.creative-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.creative-video {
+    width: 100%;
+    background: #000;
+}
+
+.creative-video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.creative-info {
+    padding: 1.5rem;
+}
+
+.creative-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0A0A0A;
+    margin-bottom: 0.5rem;
+}
+
+.creative-type {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-cta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .creative-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Make project images and titles clickable */
+.project-image-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-title {
+    cursor: pointer;
+}
+
+.project-title:hover {
+    color: #356CEE;
+}
+
+/* ============================================
+   UPDATED CREATIVE WORK CSS
+   Replace the Creative Work section in your styles-additions.css with this
+   ============================================ */
+
+/* Creative Work Grid */
+.creative-grid-section {
+    padding: 4rem 2rem;
+}
+
+.creative-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.creative-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creative-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.clickable-item {
+    cursor: pointer;
+}
+
+/* Images - NO cropping, show full images */
+.creative-image {
+    width: 100%;
+    overflow: hidden;
+    background: #f5f5f5;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creative-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Videos */
+.creative-video {
+    width: 100%;
+    background: #000;
+}
+
+.creative-video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+}
+
+.creative-info {
+    padding: 1.5rem;
+}
+
+.creative-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0A0A0A;
+    margin-bottom: 0.5rem;
+}
+
+.creative-type {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .creative-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

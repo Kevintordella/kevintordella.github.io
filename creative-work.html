@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Work - Kevin Tordella</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="image-fix.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Kevin Tordella</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="creative-work.html">Creative Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="https://www.kevint.cv" target="_blank" rel="noopener">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-container">
+            <h1 class="page-title">Creative Work</h1>
+            <p class="page-description">Graphic design, branding, and video projects</p>
+        </div>
+    </section>
+
+    <!-- Creative Grid -->
+    <section class="creative-grid-section">
+        <div class="creative-container">
+            
+            <!-- Graphic Design Items (Clickable) -->
+            <div class="creative-item clickable-item" data-type="image">
+                <div class="creative-image">
+                    <img src="images/creative/logo-1.png" alt="Cody Schwab Logo">
+                </div>
+                <div class="creative-info">
+                    <h3 class="creative-title">Cody Schwab Logo</h3>
+                    <p class="creative-type">Branding</p>
+                </div>
+            </div>
+
+            <div class="creative-item clickable-item" data-type="image">
+                <div class="creative-image">
+                    <img src="images/creative/logo-2.png" alt="Fourstarpower Logo">
+                </div>
+                <div class="creative-info">
+                    <h3 class="creative-title">Fourstarpower Logo</h3>
+                    <p class="creative-type">Branding</p>
+                </div>
+            </div>
+
+            <div class="creative-item clickable-item" data-type="image">
+                <div class="creative-image">
+                    <img src="images/creative/comedy-flyer.png" alt="Tyler Langlois Comedy Show">
+                </div>
+                <div class="creative-info">
+                    <h3 class="creative-title">Tyler Langlois Comedy Show</h3>
+                    <p class="creative-type">Print Design</p>
+                </div>
+            </div>
+
+            <div class="creative-item clickable-item" data-type="image">
+                <div class="creative-image">
+                    <img src="images/creative/flyer.png" alt="True Vine Flyer">
+                </div>
+                <div class="creative-info">
+                    <h3 class="creative-title">True Vine Flyer</h3>
+                    <p class="creative-type">Print Design</p>
+                </div>
+            </div>
+
+            <!-- Video Items with YouTube Embeds -->
+            <div class="creative-item video-item">
+                <div class="creative-video">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/QgoPRyLz7wA" title="Forecaster Single Teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="creative-info">
+                    <h3 class="creative-title">Forecaster Single Teaser</h3>
+                    <p class="creative-type">Motion Graphics</p>
+                </div>
+            </div>
+
+            <div class="creative-item video-item">
+                <div class="creative-video">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/bGKx0xBjKME" title="Classic WoW - The Playable Classes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="creative-info">
+                    <h3 class="creative-title">Classic WoW - The Playable Classes</h3>
+                    <p class="creative-type">Motion Graphics & VFX</p>
+                </div>
+            </div>
+
+            <div class="creative-item video-item">
+                <div class="creative-video">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/IwJ_Yqv4cIc" title="Top 10 WR Progression Videos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="creative-info">
+                    <h3 class="creative-title">Top 10 WR Progression Videos</h3>
+                    <p class="creative-type">Video Editing</p>
+                </div>
+            </div>
+
+            <div class="creative-item video-item">
+                <div class="creative-video">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/GXUrdlBC8UY" title="Roiyobee Halo Montage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="creative-info">
+                    <h3 class="creative-title">Roiyobee Halo Montage</h3>
+                    <p class="creative-type">Video Editing & VFX</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Kevin Tordella. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lightbox for creative work images
+        document.addEventListener('DOMContentLoaded', function() {
+            const clickableItems = document.querySelectorAll('.clickable-item[data-type="image"]');
+            
+            clickableItems.forEach(item => {
+                item.style.cursor = 'pointer';
+                
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    
+                    // Create lightbox
+                    const lightbox = document.createElement('div');
+                    lightbox.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;cursor:pointer;';
+                    
+                    // Clone image
+                    const lightboxImg = img.cloneNode();
+                    lightboxImg.style.cssText = 'max-width:90%;max-height:90%;width:auto;height:auto;display:block;border-radius:8px;';
+                    
+                    lightbox.appendChild(lightboxImg);
+                    
+                    // Close on click
+                    lightbox.addEventListener('click', function() {
+                        document.body.removeChild(lightbox);
+                    });
+                    
+                    document.body.appendChild(lightbox);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
