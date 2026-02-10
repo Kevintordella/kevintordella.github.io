@@ -1,0 +1,235 @@
+/* ===========================
+   Blog Page Styles
+   =========================== */
+
+/* Blog Header */
+.blog-header {
+    padding: 10rem 3rem 3rem;
+    margin-top: 80px;
+    background: var(--white);
+    text-align: center;
+}
+
+.blog-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.blog-description {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+}
+
+/* Blog Content Layout */
+.blog-content-section {
+    padding: 4rem 3rem;
+    background: var(--white);
+}
+
+.blog-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Sidebar */
+.blog-sidebar {
+    position: sticky;
+    top: 120px;
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.sidebar-section {
+    margin-bottom: 2.5rem;
+}
+
+.sidebar-section:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+/* Search */
+.blog-search {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--medium-gray);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.blog-search:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+/* Sidebar Lists */
+.sidebar-list {
+    list-style: none;
+}
+
+.sidebar-list li {
+    margin-bottom: 0.75rem;
+}
+
+.sidebar-link {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    transition: color 0.3s ease;
+}
+
+.sidebar-link:hover {
+    color: var(--primary-blue);
+}
+
+/* Archive Dropdown */
+.blog-archive-dropdown {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--medium-gray);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.blog-archive-dropdown:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+/* Main Blog Content */
+.blog-main {
+    max-width: 700px;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Blog Post Preview */
+.blog-post-preview {
+    margin-bottom: 3rem;
+}
+
+.post-preview-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.post-preview-title a {
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.post-preview-title a:hover {
+    color: var(--primary-blue);
+}
+
+.post-preview-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.post-category {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.post-preview-excerpt {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+.post-read-more {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.post-read-more:hover {
+    transform: translateX(4px);
+}
+
+.post-divider {
+    height: 1px;
+    background: var(--medium-gray);
+    margin: 3rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .blog-sidebar {
+        position: static;
+        grid-row: 1;
+    }
+
+    .blog-main {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-header {
+        padding: 8rem 1.5rem 2rem;
+    }
+
+    .blog-title {
+        font-size: 3rem;
+    }
+
+    .blog-content-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .post-preview-title {
+        font-size: 1.5rem;
+    }
+
+    .post-preview-meta {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}

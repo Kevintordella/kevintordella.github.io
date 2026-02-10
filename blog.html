@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Kevin Tordella</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Kevin Tordella</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="creative-work.html">Creative Work</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="https://www.kevint.cv" target="_blank" rel="noopener">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="blog-header-container">
+            <h1 class="blog-title">Blog</h1>
+            <p class="blog-description">Thoughts on design, learning, and life</p>
+        </div>
+    </section>
+
+    <!-- Blog Content with Sidebar -->
+    <section class="blog-content-section">
+        <div class="blog-container">
+            
+            <!-- Sidebar -->
+            <aside class="blog-sidebar">
+                <!-- Search -->
+                <div class="sidebar-section">
+                    <input type="text" class="blog-search" placeholder="Search posts..." id="searchInput">
+                </div>
+
+                <!-- Recent Posts -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Recent Posts</h3>
+                    <ul class="sidebar-list" id="recentPosts">
+                        <!-- Will be populated by JavaScript -->
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Categories</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="#" class="sidebar-link" data-category="learning">Learning</a></li>
+                        <li><a href="#" class="sidebar-link" data-category="projects">Projects</a></li>
+                        <li><a href="#" class="sidebar-link" data-category="music">Music</a></li>
+                        <li><a href="#" class="sidebar-link" data-category="thoughts">Thoughts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Archive -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Archive</h3>
+                    <select class="blog-archive-dropdown" id="archiveDropdown">
+                        <option value="">Select month...</option>
+                        <!-- Will be populated by JavaScript -->
+                    </select>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="blog-main">
+                <div class="blog-posts" id="blogPosts">
+                    <!-- Posts will be dynamically loaded here -->
+                    <!-- For now, showing example structure -->
+                    
+                    <article class="blog-post-preview">
+                        <h2 class="post-preview-title">
+                            <a href="blog-post-example.html">What I'm Learning About UX Research</a>
+                        </h2>
+                        <div class="post-preview-meta">
+                            <span class="post-date">February 10, 2026</span>
+                            <span class="post-read-time">3 min read</span>
+                            <span class="post-category">Learning</span>
+                        </div>
+                        <p class="post-preview-excerpt">
+                            Started reading "Just Enough Research" this week and the chapter on stakeholder 
+                            interviews completely changed how I think about research planning...
+                        </p>
+                        <a href="blog-post-example.html" class="post-read-more">Read more →</a>
+                    </article>
+
+                    <div class="post-divider"></div>
+
+                    <!-- More posts would appear here -->
+
+                </div>
+            </main>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Kevin Tordella. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="blog.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

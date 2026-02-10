@@ -163,3 +163,55 @@ document.querySelectorAll('.progress-item').forEach(item => {
         }
     });
 });
+
+// Mobile Navigation Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    // Create hamburger button
+    const navContainer = document.querySelector('.nav-container');
+    const navLinks = document.querySelector('.nav-links');
+    
+    // Create hamburger button HTML
+    const hamburger = document.createElement('button');
+    hamburger.className = 'nav-toggle';
+    hamburger.setAttribute('aria-label', 'Toggle navigation');
+    hamburger.innerHTML = '<span></span><span></span><span></span>';
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    
+    // Insert hamburger button and overlay
+    navContainer.insertBefore(hamburger, navLinks);
+    document.body.appendChild(overlay);
+    
+    // Toggle menu function
+    function toggleMenu() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    }
+    
+    // Click hamburger to toggle
+    hamburger.addEventListener('click', toggleMenu);
+    
+    // Click overlay to close
+    overlay.addEventListener('click', toggleMenu);
+    
+    // Click nav link to close menu
+    const navLinksItems = navLinks.querySelectorAll('a');
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navLinks.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+    
+    // Close menu on window resize to desktop size
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+});

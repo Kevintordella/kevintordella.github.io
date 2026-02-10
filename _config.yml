@@ -1,0 +1,35 @@
+# Site Settings
+title: Kevin Tordella
+description: UX/Product Designer & Multidisciplinary Creative
+url: "https://kevintordella.github.io"
+baseurl: ""
+
+# Build Settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Exclude files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Kevin Tordella"

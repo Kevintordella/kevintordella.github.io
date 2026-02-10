@@ -674,3 +674,112 @@ img {
         gap: 2rem;
     }
 }
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Hamburger animation when open */
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1.25rem 1.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Show hamburger button on mobile */
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Hide nav links by default on mobile */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
+        padding: 5rem 2rem 2rem;
+        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Show nav links when menu is open */
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid var(--medium-gray);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1.1rem;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    /* Overlay when menu is open */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+}
