@@ -667,6 +667,13 @@ img {
     font-weight: 500;
 }
 
+.creative-description {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .creative-container {
